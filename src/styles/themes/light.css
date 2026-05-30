@@ -1,0 +1,8 @@
+:root[data-theme='light'] {
+  --color-bg: #ffffff;
+  --color-surface: rgba(0, 0, 0, 0.06);
+  --color-text: #111111;
+  --color-muted: rgba(17, 17, 17, 0.65);
+  --color-accent: #2563eb;
+}
+

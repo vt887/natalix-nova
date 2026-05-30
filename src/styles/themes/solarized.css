@@ -1,0 +1,8 @@
+:root[data-theme='solarized'] {
+  --color-bg: #fdf6e3;
+  --color-surface: rgba(7, 54, 66, 0.08);
+  --color-text: #073642;
+  --color-muted: rgba(7, 54, 66, 0.6);
+  --color-accent: #268bd2;
+}
+

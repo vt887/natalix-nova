@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Natalix Nova",
+  "version": "1.0.0",
+  "description": "Natalix Nova new tab extension.",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "permissions": [
+    "bookmarks",
+    "tabs",
+    "alarms",
+    "scripting",
+    "management",
+    "notifications",
+    "webNavigation",
+    "storage",
+    "unlimitedStorage",
+    "idle",
+    "identity",
+    "offscreen",
+    "geolocation"
+  ],
+  "optional_permissions": [
+    "history"
+  ],
+  "host_permissions": [
+    "https://api.open-meteo.com/*",
+    "https://geocoding-api.open-meteo.com/*",
+    "https://api.github.com/*",
+    "https://www.googleapis.com/*",
+    "https://api.todoist.com/*",
+    "https://api.notion.com/*",
+    "https://api.anthropic.com/*",
+    "https://api.openai.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "http://localhost:11434/*"
+  ],
+  "oauth2": {
+    "client_id": "REPLACE_ME.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/calendar.readonly"]
+  },
+  "minimum_chrome_version": "120",
+  "icons": {
+    "128": "public/img/backgrounds/21.jpg"
+  }
+}

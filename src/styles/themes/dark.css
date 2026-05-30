@@ -1,8 +1,21 @@
 :root[data-theme='dark'] {
-  --color-bg: #0f0f0f;
-  --color-surface: rgba(255, 255, 255, 0.08);
-  --color-text: #f0f0f0;
-  --color-muted: rgba(240, 240, 240, 0.7);
-  --color-accent: #6366f1;
+  --theme-name: 'dark';
+  --color-bg-primary: #050e18;
+  --color-bg-secondary: #091525;
+  --color-panel: rgba(8, 24, 40, 0.82);
+  --color-panel-strong: rgba(10, 30, 50, 0.92);
+  --color-text-primary: #e8f4ff;
+  --color-text-secondary: #a0c4e0;
+  --color-accent-primary: #22d3ee;
+  --color-accent-secondary: #14b8a6;
+  --color-accent-tertiary: #38bdf8;
+  --color-border-soft: rgba(34, 211, 238, 0.24);
+  --color-border-strong: rgba(20, 184, 166, 0.48);
+  --shadow-soft: 0 12px 32px rgba(20, 184, 166, 0.18);
+  --shadow-strong: 0 18px 48px rgba(34, 211, 238, 0.28);
+  --color-input-bg: rgba(11, 39, 51, 0.82);
+  --color-input-border: rgba(20, 184, 166, 0.32);
+  --color-overlay-soft: rgba(6, 25, 35, 0.38);
+  --color-overlay-strong: rgba(6, 25, 35, 0.62);
+  color-scheme: dark;
 }
-

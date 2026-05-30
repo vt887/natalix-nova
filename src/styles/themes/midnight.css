@@ -1,8 +1,21 @@
 :root[data-theme='midnight'] {
-  --color-bg: #060b1a;
-  --color-surface: rgba(255, 255, 255, 0.07);
-  --color-text: #eaf0ff;
-  --color-muted: rgba(234, 240, 255, 0.7);
-  --color-accent: #22c55e;
+  --theme-name: 'midnight';
+  --color-bg-primary: #041520;
+  --color-bg-secondary: #061c2c;
+  --color-panel: rgba(5, 24, 35, 0.82);
+  --color-panel-strong: rgba(5, 24, 35, 0.94);
+  --color-text-primary: #dff5f5;
+  --color-text-secondary: #8ecfcf;
+  --color-accent-primary: #2dd4bf;
+  --color-accent-secondary: #0ea5e9;
+  --color-accent-tertiary: #67e8f9;
+  --color-border-soft: rgba(45, 212, 191, 0.24);
+  --color-border-strong: rgba(14, 165, 233, 0.42);
+  --shadow-soft: 0 12px 32px rgba(14, 165, 233, 0.16);
+  --shadow-strong: 0 18px 48px rgba(45, 212, 191, 0.24);
+  --color-input-bg: rgba(4, 21, 32, 0.82);
+  --color-input-border: rgba(45, 212, 191, 0.26);
+  --color-overlay-soft: rgba(4, 21, 32, 0.34);
+  --color-overlay-strong: rgba(4, 21, 32, 0.6);
+  color-scheme: dark;
 }
-

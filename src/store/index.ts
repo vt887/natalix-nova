@@ -10,18 +10,18 @@ import type { NotesSlice } from './slices/notes';
 import { notesInitialState } from './slices/notes';
 import type { PomodoroSlice } from './slices/pomodoro';
 import { pomodoroInitialState } from './slices/pomodoro';
-import type { SettingsSlice } from './slices/settings';
+import type { SettingsActions, SettingsState } from './slices/settings';
 import { settingsInitialState } from './slices/settings';
 import type { StocksSlice } from './slices/stocks';
 import { stocksInitialState } from './slices/stocks';
 import type { UISlice } from './slices/ui';
-import { uiInitialState } from './slices/ui';
 import type { WeatherSlice } from './slices/weather';
 import { weatherInitialState } from './slices/weather';
 import type { WorkspacesSlice } from './slices/workspaces';
 import { workspacesInitialState } from './slices/workspaces';
 
-export type RootState = SettingsSlice &
+export type RootState = SettingsState &
+  SettingsActions &
   AppsSlice &
   WeatherSlice &
   NotesSlice &
@@ -32,8 +32,11 @@ export type RootState = SettingsSlice &
   IntegrationsSlice &
   UISlice;
 
-const initialState: RootState = {
+export const useStore = create<RootState>((set) => ({
   ...settingsInitialState,
+  setTheme: (theme) => set({ theme }),
+  setBackground: (background) => set({ background }),
+  hydrateSettings: (state) => set((current) => ({ ...current, ...state })),
   ...appsInitialState,
   ...weatherInitialState,
   ...notesInitialState,
@@ -42,8 +45,10 @@ const initialState: RootState = {
   ...workspacesInitialState,
   ...stocksInitialState,
   ...integrationsInitialState,
-  ...uiInitialState,
-};
-
-export const useStore = create<RootState>(() => initialState);
+  ...{
+    activePanel: null,
+    focusMode: false,
+    setActivePanel: (panel: string | null) => set({ activePanel: panel }),
+  },
+}));
 

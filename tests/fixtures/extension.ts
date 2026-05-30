@@ -27,22 +27,8 @@ export const test = base.extend<Fixtures>({
   },
 
   extensionId: async ({ context }, use) => {
-    // Discover the extension id by looking for any chrome-extension:// page.
-    const background = context.backgroundPages()[0];
-    if (background) {
-      const url = background.url();
-      const id = new URL(url).host;
-      await use(id);
-      return;
-    }
-
-    // Fallback: open a new tab and wait for any extension page to appear.
-    const page = await context.newPage();
-    await page.goto('chrome://extensions/');
-    const pages = context.pages();
-    const extPage = pages.find((p) => p.url().startsWith('chrome-extension://'));
-    const id = extPage ? new URL(extPage.url()).host : '';
-    await use(id);
+    const worker = context.serviceWorkers()[0] ?? (await context.waitForEvent('serviceworker'));
+    await use(new URL(worker.url()).host);
   },
 });
 

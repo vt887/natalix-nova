@@ -4,17 +4,26 @@ import { createRoot } from 'react-dom/client';
 import './styles/reset.css';
 import './styles/tokens.css';
 import './styles/global.css';
+import './styles/legacy/style.css';
+import './styles/legacy/themes.css';
+import './styles/legacy/panels.css';
+import './styles/legacy/widgets.css';
+import './styles/legacy/weather.css';
+import './styles/legacy/search_extra.css';
+import './styles/legacy/recently_closed.css';
+import './styles/legacy/context_menu.css';
 import './styles/themes/dark.css';
 import './styles/themes/light.css';
 import './styles/themes/midnight.css';
 import './styles/themes/solarized.css';
 
-// PR-01: no visible UI. Keep the page blank, but ensure the app bundle loads cleanly.
-function App(): React.ReactNode {
-  return null;
-}
+import { App } from './App';
 
 const rootEl = document.getElementById('root');
+
 if (rootEl) {
-  createRoot(rootEl).render(React.createElement(App));
+  createRoot(rootEl).render(
+    React.createElement(React.StrictMode, null, React.createElement(App)),
+  );
 }
+

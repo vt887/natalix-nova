@@ -4,6 +4,10 @@ function getLastErrorMessage(): string | undefined {
 }
 
 export const runtime = {
+  getURL(path: string): string {
+    return chrome.runtime.getURL(path);
+  },
+
   onMessage(
     cb: (
       message: unknown,
@@ -33,4 +37,3 @@ export const runtime = {
     });
   },
 };
-

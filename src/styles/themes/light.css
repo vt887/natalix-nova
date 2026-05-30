@@ -1,8 +1,21 @@
 :root[data-theme='light'] {
-  --color-bg: #ffffff;
-  --color-surface: rgba(0, 0, 0, 0.06);
-  --color-text: #111111;
-  --color-muted: rgba(17, 17, 17, 0.65);
-  --color-accent: #2563eb;
+  --theme-name: 'light';
+  --color-bg-primary: #f4f7fb;
+  --color-bg-secondary: #eaeef5;
+  --color-panel: rgba(255, 255, 255, 0.74);
+  --color-panel-strong: rgba(255, 255, 255, 0.88);
+  --color-text-primary: #1a1f2e;
+  --color-text-secondary: #4a5568;
+  --color-accent-primary: #6366f1;
+  --color-accent-secondary: #8b5cf6;
+  --color-accent-tertiary: #06b6d4;
+  --color-border-soft: rgba(99, 102, 241, 0.18);
+  --color-border-strong: rgba(99, 102, 241, 0.34);
+  --shadow-soft: 0 12px 32px rgba(51, 65, 85, 0.12);
+  --shadow-strong: 0 18px 48px rgba(51, 65, 85, 0.2);
+  --color-input-bg: rgba(255, 255, 255, 0.88);
+  --color-input-border: rgba(148, 163, 184, 0.36);
+  --color-overlay-soft: rgba(255, 255, 255, 0.16);
+  --color-overlay-strong: rgba(255, 255, 255, 0.3);
+  color-scheme: light;
 }
-

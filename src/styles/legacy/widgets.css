@@ -1,0 +1,6 @@
+.placeholder-zone {
+  border: 1px dashed var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--color-panel) 38%, transparent);
+}
+

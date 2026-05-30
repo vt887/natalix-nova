@@ -9,11 +9,12 @@ test('new tab loads with no console errors and SW is active', async ({ context, 
   });
 
   await page.goto('chrome://newtab/');
-  await expect(page).toHaveTitle(/Natalix Nova/i);
+  await expect(page.locator('#page-bg')).toBeVisible();
+  await expect(page.locator('#left-toolbar')).toBeVisible();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   expect(consoleErrors).toEqual([]);
 
   // Service worker should be registered by the extension.
   // The exact URL includes the extension id.
   expect(extensionId).not.toEqual('');
 });
-

@@ -1,8 +1,21 @@
 :root[data-theme='solarized'] {
-  --color-bg: #fdf6e3;
-  --color-surface: rgba(7, 54, 66, 0.08);
-  --color-text: #073642;
-  --color-muted: rgba(7, 54, 66, 0.6);
-  --color-accent: #268bd2;
+  --theme-name: 'solarized';
+  --color-bg-primary: #1a120b;
+  --color-bg-secondary: #24170f;
+  --color-panel: rgba(36, 23, 15, 0.82);
+  --color-panel-strong: rgba(36, 23, 15, 0.94);
+  --color-text-primary: #fff7ed;
+  --color-text-secondary: #e7c9a9;
+  --color-accent-primary: #f59e0b;
+  --color-accent-secondary: #fb923c;
+  --color-accent-tertiary: #fcd34d;
+  --color-border-soft: rgba(245, 158, 11, 0.24);
+  --color-border-strong: rgba(251, 146, 60, 0.42);
+  --shadow-soft: 0 12px 32px rgba(251, 146, 60, 0.14);
+  --shadow-strong: 0 18px 48px rgba(245, 158, 11, 0.22);
+  --color-input-bg: rgba(26, 18, 11, 0.82);
+  --color-input-border: rgba(245, 158, 11, 0.26);
+  --color-overlay-soft: rgba(26, 18, 11, 0.34);
+  --color-overlay-strong: rgba(26, 18, 11, 0.6);
+  color-scheme: dark;
 }
-

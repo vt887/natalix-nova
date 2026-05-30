@@ -1,16 +1,30 @@
-import type { SearchProviderId, ThemeMode } from '../../types/backup';
+export type ThemeMode = 'auto' | 'dark' | 'light' | 'midnight' | 'solarized';
+export type BackgroundKind = 'preset' | 'custom';
 
-export interface SettingsSlice {
-  theme: ThemeMode;
-  searchProvider: SearchProviderId;
-  units: 'metric' | 'imperial';
-  language: string;
+export interface BackgroundConfig {
+  type: BackgroundKind;
+  url: string;
+  label?: string;
 }
 
-export const settingsInitialState: SettingsSlice = {
-  theme: 'auto',
-  searchProvider: 'google',
-  units: 'metric',
-  language: 'en',
+export interface SettingsState {
+  theme: ThemeMode;
+  background: BackgroundConfig;
+}
+
+export interface SettingsActions {
+  setTheme: (theme: ThemeMode) => void;
+  setBackground: (background: BackgroundConfig) => void;
+  hydrateSettings: (state: Partial<SettingsState>) => void;
+}
+
+export const defaultBackground: BackgroundConfig = {
+  type: 'preset',
+  url: 'img/backgrounds/01.jpg',
+  label: 'Preset 01',
 };
 
+export const settingsInitialState: SettingsState = {
+  theme: 'dark',
+  background: defaultBackground,
+};

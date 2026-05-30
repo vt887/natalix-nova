@@ -1,9 +1,19 @@
 import { defineConfig } from 'vite';
+import type { UserConfig } from 'vite';
 import { crx } from '@crxjs/vite-plugin';
 import manifest from './manifest.json';
 
-export default defineConfig({
+const config: UserConfig & {
+  test: {
+    environment: 'jsdom';
+    globals: true;
+  };
+} = {
   plugins: [crx({ manifest })],
+  test: {
+    environment: 'jsdom',
+    globals: true,
+  },
   server: {
     port: 5173,
     strictPort: true,
@@ -11,4 +21,6 @@ export default defineConfig({
       port: 5173,
     },
   },
-});
+};
+
+export default defineConfig(config);

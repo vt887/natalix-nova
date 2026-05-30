@@ -1,0 +1,8 @@
+html.night-theme {
+  filter: saturate(70%) contrast(90%) brightness(90%);
+}
+
+html.mac > body {
+  letter-spacing: -0.022em;
+}
+

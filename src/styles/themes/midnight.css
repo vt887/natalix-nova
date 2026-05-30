@@ -1,0 +1,8 @@
+:root[data-theme='midnight'] {
+  --color-bg: #060b1a;
+  --color-surface: rgba(255, 255, 255, 0.07);
+  --color-text: #eaf0ff;
+  --color-muted: rgba(234, 240, 255, 0.7);
+  --color-accent: #22c55e;
+}
+
